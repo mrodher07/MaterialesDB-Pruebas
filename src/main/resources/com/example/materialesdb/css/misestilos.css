@@ -1,0 +1,21 @@
+.gridPaneInicio{
+    -fx-background-color: #D8FFDB;
+    -fx-text-fill: #ffffff;
+}
+
+.botonOpcion{
+    -fx-background-color: #025939;
+}
+
+.botonOpcion:hover{
+    -fx-background-color: #043f2a;
+}
+
+.botonInicio{
+    -fx-background-color: #D8FFDB;
+    -fx-font-size: 170%;
+}
+
+.botonInicio:hover{
+    -fx-background-color: #91cc97;
+}

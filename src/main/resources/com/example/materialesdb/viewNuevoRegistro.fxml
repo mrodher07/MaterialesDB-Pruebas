@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane fx:id="gridPaneCuerpo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="488.0" prefWidth="666.0" stylesheets="@css/misestilos.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.materialesdb.ControllerNuevoRegistro">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="334.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="332.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="0.0" prefHeight="64.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="233.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="191.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #025939;" GridPane.columnSpan="2" GridPane.hgrow="ALWAYS" GridPane.vgrow="NEVER">
+            <children>
+                <Label fx:id="botonVolverInicio" text="👷‍♂️" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="32.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets left="20.0" />
+                    </HBox.margin>
+                </Label>
+                <Label alignment="CENTER" contentDisplay="CENTER" text="MATERIALES" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="32.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets left="20.0" />
+                    </HBox.margin>
+                </Label>
+                <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                    <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </HBox.margin>
+                    <children>
+                        <Button fx:id="cabeceraNuevoRegistro" mnemonicParsing="false" styleClass="botonOpcion" text="➕" textFill="WHITE">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+        </HBox>
+        <GridPane styleClass="gridPaneInicio" GridPane.columnSpan="2" GridPane.rowIndex="1" GridPane.rowSpan="2">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="152.33334350585938" minWidth="10.0" prefWidth="123.33330535888672" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="245.6666488647461" minWidth="10.0" prefWidth="200.66664632161456" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="190.33331298828125" minWidth="10.0" prefWidth="144.00002034505212" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="202.33328247070312" minWidth="10.0" prefWidth="178.66666666666663" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <GridPane.margin>
+                <Insets />
+            </GridPane.margin>
+            <children>
+                <Label text="Nombre: ">
+                    <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </GridPane.margin>
+                </Label>
+                <TextField id="tfNombre" fx:id="tfNombreNR" prefHeight="25.0" prefWidth="201.0" GridPane.columnIndex="1">
+                    <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </GridPane.margin>
+                </TextField>
+                <Label text="Fabricante" GridPane.rowIndex="1">
+                    <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </GridPane.margin>
+                </Label>
+                <TextField id="tfFabricante" fx:id="tfFabricanteNR" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </GridPane.margin>
+                </TextField>
+                <Label text="Material: " GridPane.rowIndex="2">
+                    <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </GridPane.margin>
+                </Label>
+                <TextField id="tfMaterial" fx:id="tfMaterialNR" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </GridPane.margin>
+                </TextField>
+                <Label text="Precio: " GridPane.rowIndex="3">
+                    <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </GridPane.margin>
+                </Label>
+                <Label text="Indicador de Peligro:" GridPane.columnIndex="2">
+                    <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </GridPane.margin>
+                </Label>
+                <ComboBox id="tfIndicador" fx:id="cbIndicadorPeligroNR" prefWidth="150.0" GridPane.columnIndex="3">
+                    <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </GridPane.margin>
+                </ComboBox>
+                <Label text="Fecha Inicio Venta: " GridPane.columnIndex="2" GridPane.rowIndex="1">
+                    <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </GridPane.margin>
+                </Label>
+                <Label text="Fecha Fin Venta: " GridPane.columnIndex="2" GridPane.rowIndex="2">
+                    <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </GridPane.margin>
+                </Label>
+                <DatePicker id="tfInicioVenta" fx:id="tfFechaInicioNR" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                    <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </GridPane.margin>
+                </DatePicker>
+                <DatePicker id="tfFinVenta" fx:id="tfFechaFinNR" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                    <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </GridPane.margin>
+                </DatePicker>
+                <Button id="btnAnadirNuevoMaterial" fx:id="botonNuevoRegistro" alignment="TOP_LEFT" mnemonicParsing="false" text="Añadir Nuevo Material" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <TextField id="tfPrecio" fx:id="tfPrecioNR" layoutX="153.0" layoutY="157.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </GridPane.margin>
+            </TextField>
+            </children>
+        </GridPane>
+    </children>
+</GridPane>
