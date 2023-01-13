@@ -61,34 +61,43 @@ public class ControllerNuevoRegistro {
         cbIndicadorPeligroNR.setItems(olOptions);
 
         botonNuevoRegistro.setOnMouseClicked((EventHandler) event -> {
-
             try {
-                var nombre = tfNombreNR.getText();
-                var fabricante = tfFabricanteNR.getText();
-                var material = tfMaterialNR.getText();
-                var precio = Double.parseDouble(tfPrecioNR.getText());
-                var indicadorPeligro = cbIndicadorPeligroNR.getValue().toString();
-                LocalDate fechaInicioValor = tfFechaInicioNR.getValue();
-                LocalDate fechaFinValor = tfFechaFinNR.getValue();
+                Alert alert;
+                if(tfNombreNR.getText().trim().equals("") || tfFabricanteNR.getText().trim().equals("") || tfMaterialNR.getText().trim().equals("") || tfPrecioNR.getText().trim().equals("") || cbIndicadorPeligroNR.getValue().toString() == "" || tfFechaInicioNR.getValue().toString().trim().equals("") || tfFechaFinNR.getValue().toString().trim().equals("")){
 
-                Date fechaInicio = Date.from(fechaInicioValor.atStartOfDay().atZone(ZoneId.systemDefault()).toInstant());
-                Date fechaFin = Date.from(fechaFinValor.atStartOfDay().atZone(ZoneId.systemDefault()).toInstant());
+                    alert = new Alert(Alert.AlertType.INFORMATION, "Comprueba que los campos se han introducido correctamente.");
+                    alert.setHeaderText(null);
+                    alert.showAndWait();
 
-                System.out.println(nombre+" "+fabricante+" "+material+" "+precio+" "+indicadorPeligro+" "+fechaInicio+" "+fechaFin);
+                }else {
+                    var nombre = tfNombreNR.getText();
+                    var fabricante = tfFabricanteNR.getText();
+                    var material = tfMaterialNR.getText();
+                    var precio = Double.parseDouble(tfPrecioNR.getText());
+                    var indicadorPeligro = cbIndicadorPeligroNR.getValue().toString();
+                    LocalDate fechaInicioValor = tfFechaInicioNR.getValue();
+                    LocalDate fechaFinValor = tfFechaFinNR.getValue();
 
-                materialDAO.anadirNuevoRegistro(nombre, fabricante, material, precio, indicadorPeligro, fechaInicio, fechaFin);
+                    Date fechaInicio = Date.from(fechaInicioValor.atStartOfDay().atZone(ZoneId.systemDefault()).toInstant());
+                    Date fechaFin = Date.from(fechaFinValor.atStartOfDay().atZone(ZoneId.systemDefault()).toInstant());
 
-                Stage stage = new Stage();
-                FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("viewInicio.fxml"));
-                Scene scene = new Scene(fxmlLoader.load(), 640, 500);
-                stage.setTitle("Inicio");
-                stage.setMinWidth(640);
-                stage.setMinHeight(500);
-                stage.setScene(scene);
-                stage.show();
-                Node source = (Node) event.getSource();
-                Stage stageActual = (Stage) source.getScene().getWindow();
-                stageActual.close();
+                    System.out.println(nombre + " " + fabricante + " " + material + " " + precio + " " + indicadorPeligro + " " + fechaInicio + " " + fechaFin);
+
+                    materialDAO.anadirNuevoRegistro(nombre, fabricante, material, precio, indicadorPeligro, fechaInicio, fechaFin);
+
+                    Stage stage = new Stage();
+                    FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("viewInicio.fxml"));
+                    Scene scene = new Scene(fxmlLoader.load(), 640, 500);
+                    stage.setTitle("Inicio");
+                    stage.setMinWidth(640);
+                    stage.setMinHeight(500);
+                    stage.setScene(scene);
+                    stage.show();
+                    Node source = (Node) event.getSource();
+                    Stage stageActual = (Stage) source.getScene().getWindow();
+                    stageActual.close();
+                }
+
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }

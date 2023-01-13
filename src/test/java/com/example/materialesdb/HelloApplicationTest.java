@@ -70,9 +70,45 @@ class HelloApplicationTest {
         robot.clickOn("#btnAnadirNuevoMaterial");
 
         robot.sleep(500);
-        FxAssert.verifyThat("#tvMateriales", TableViewMatchers.containsRow(13, "Miguel", "YesoCo", "Yeso", 5.67, "D", "1970-01-01", "1970-01-01"));
+        FxAssert.verifyThat("#tvMateriales", TableViewMatchers.containsRow(20, "Miguel", "YesoCo", "Yeso", 5.67, "D", "1970-01-01", "1970-01-01"));
 
-        
+        robot.sleep(500);
+
+        robot.clickOn("#btnNuevo");
+        robot.sleep(500);
+
+        /*robot.clickOn("#tfNombre");
+        robot.write("Claudiu");
+        FxAssert.verifyThat("#tfNombre", TextInputControlMatchers.hasText("Claudiu"));
+
+
+         */
+        robot.clickOn("#tfFabricante");
+        robot.write("Benz");
+        //FxAssert.verifyThat("#tfFabricante", TextInputControlMatchers.hasText("Benz"));
+
+        robot.clickOn("#tfMaterial");
+        robot.write("Pladur");
+        //FxAssert.verifyThat("#tfMaterial", TextInputControlMatchers.hasText("Pladur"));
+
+        robot.clickOn("#tfPrecio");
+        robot.write("5.20");
+        //FxAssert.verifyThat("#tfPrecio", TextInputControlMatchers.hasText("5.20"));
+
+        robot.clickOn("#tfIndicador");
+        robot.clickOn("A");
+        //FxAssert.verifyThat("#tfIndicador", ComboBoxMatchers.hasSelectedItem("A"));
+
+        robot.clickOn("#tfInicioVenta");
+        robot.write("8/10/2023");
+
+        //FxAssert.verifyThat("#huevo", TextInputControlMatchers.hasText("9/1/2023"));
+
+        robot.clickOn("#tfFinVenta");
+        robot.write("21/11/2023");
+        //FxAssert.verifyThat("#tfInicioVenta", TextInputControlMatchers.hasText("23/3/2023"));
+
+        robot.clickOn("#btnAnadirNuevoMaterial");
 
     }
 
