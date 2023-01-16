@@ -70,7 +70,7 @@ class HelloApplicationTest {
         robot.clickOn("#btnAnadirNuevoMaterial");
 
         robot.sleep(500);
-        FxAssert.verifyThat("#tvMateriales", TableViewMatchers.containsRow(20, "Miguel", "YesoCo", "Yeso", 5.67, "D", "1970-01-01", "1970-01-01"));
+        FxAssert.verifyThat("#tvMateriales", TableViewMatchers.containsRow(1, "Miguel", "YesoCo", "Yeso", 5.67, "D", "1970-01-01", "1970-01-01"));
 
         robot.sleep(500);
 

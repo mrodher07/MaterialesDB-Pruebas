@@ -327,7 +327,7 @@ public class MaterialDAO {
         try {
             conexionBBDD = DriverManager.getConnection(servidor, usuario, passwd);
             System.out.println(color);
-            if(color!=""){
+            if(!color.isEmpty()){
                 SQL = "DELETE material.*, datostecnicos.* " +
                         "FROM material, datostecnicos " +
                         "WHERE material.idMaterial=datostecnicos.idMaterial " +
@@ -354,4 +354,41 @@ public class MaterialDAO {
         }
     }
 
+    public int obtenermaterial (String nombreMaterial, String fabricante, String material, Double precio, String indicadorPeligro, Date fechaInicio, Date fechaFin){
+        ObservableList<Material> datosResultadoConsulta = FXCollections.observableArrayList();
+
+        try {
+            conexionBBDD = DriverManager.getConnection(servidor, usuario, passwd);
+
+            String SQL = "SELECT * "+
+                    "FROM material "+
+                    "WHERE nombreMaterial LIKE '%" +nombreMaterial+
+                    "%' OR fabricante LIKE '%" +fabricante+
+                    "%' OR material LIKE '%" +material+
+                    "%' OR precio >= " +precio+
+                    " OR indicadorPeligro LIKE '%" +indicadorPeligro+ "%';";
+
+            ResultSet resultadoConsulta = conexionBBDD.createStatement().executeQuery(SQL);
+
+            while(resultadoConsulta.next()){
+                datosResultadoConsulta.add(new Material(
+                        resultadoConsulta.getInt("idMaterial"),
+                        resultadoConsulta.getString("nombreMaterial"),
+                        resultadoConsulta.getString("fabricante"),
+                        resultadoConsulta.getString("material"),
+                        resultadoConsulta.getDouble("precio"),
+                        resultadoConsulta.getString("indicadorPeligro"),
+                        resultadoConsulta.getString("fechaInicioVenta"),
+                        resultadoConsulta.getString("fechaFinVenta")
+                ));
+                System.out.println("Row[1] added"+resultadoConsulta.toString());
+            }
+            conexionBBDD.close();
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }finally {
+            return datosResultadoConsulta.size();
+        }
+    }
 }
