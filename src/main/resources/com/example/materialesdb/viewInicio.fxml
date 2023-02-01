@@ -48,6 +48,16 @@
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                     </HBox.margin>
                     <children>
+                  <Button id="reporteSimple" fx:id="reporteSimple" mnemonicParsing="false" styleClass="botonOpcion" text="RS" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button id="subReporte" fx:id="subReporte" mnemonicParsing="false" styleClass="botonOpcion" text="SubR" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
                         <Button id="btnNuevo" fx:id="cabeceraNuevoRegistro" mnemonicParsing="false" styleClass="botonOpcion" text="➕" textFill="WHITE">
                             <font>
                                 <Font size="24.0" />

@@ -71,11 +71,9 @@ public class ControllerInicio {
     @FXML
     private TableColumn tcFechaFinVenta;
     @FXML
-    private Button cabeceraBuscar;
+    private Button reporteSimple;
     @FXML
-    private Button cabeceraEditar;
-    @FXML
-    private Button cabeceraBorrar;
+    private Button subReporte;
 
     @FXML
     protected void initialize(){
@@ -100,6 +98,10 @@ public class ControllerInicio {
             }else{
                 cargarDatosConsultaTabla();
             }
+        });
+
+        reporteSimple.setOnMouseClicked(event->{
+
         });
 
         cabeceraNuevoRegistro.setOnMouseClicked(new EventHandler(){
