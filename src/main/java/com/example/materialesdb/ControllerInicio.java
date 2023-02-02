@@ -16,8 +16,10 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import net.sf.jasperreports.engine.JRException;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.ZoneId;
@@ -101,7 +103,16 @@ public class ControllerInicio {
         });
 
         reporteSimple.setOnMouseClicked(event->{
-
+            try {
+                JavaFXJasperReport jfx = new JavaFXJasperReport();
+                jfx.showReportSimple();
+            } catch (JRException e) {
+                throw new RuntimeException(e);
+            } catch (ClassNotFoundException e) {
+                throw new RuntimeException(e);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
         });
 
         cabeceraNuevoRegistro.setOnMouseClicked(new EventHandler(){

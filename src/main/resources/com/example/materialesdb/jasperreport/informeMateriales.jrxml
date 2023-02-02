@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="informeMateriales" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7ee93852-d5de-41a3-9842-f1b05d9d7ee2">
+	<property name="com.jaspersoft.studio.data.sql.tables">
+		<![CDATA[bm9pbmNoLm1hdGVyaWFsIEFTICwzMDUsMTcsYjgxMDMxYjUtMDAxYy00ZWEwLTk2OTEtZjQwMGY1
+YzE3YzFmOw==]]>
+	</property>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="PedidosMariaDB"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT `idMaterial`,
+	`nombreMaterial`,
+	fabricante,
+	material,
+	precio,
+	`indicadorPeligro`,
+	`fechaInicioVenta`,
+	`fechaFinVenta`
+FROM noinch.material ORDER BY  noinch.material.`idMaterial`]]>
+	</queryString>
+	<field name="idMaterial" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="idMaterial"/>
+		<property name="com.jaspersoft.studio.field.label" value="idMaterial"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="material"/>
+	</field>
+	<field name="nombreMaterial" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nombreMaterial"/>
+		<property name="com.jaspersoft.studio.field.label" value="nombreMaterial"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="material"/>
+	</field>
+	<field name="fabricante" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="fabricante"/>
+		<property name="com.jaspersoft.studio.field.label" value="fabricante"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="material"/>
+	</field>
+	<field name="material" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="material"/>
+		<property name="com.jaspersoft.studio.field.label" value="material"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="material"/>
+	</field>
+	<field name="precio" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="precio"/>
+		<property name="com.jaspersoft.studio.field.label" value="precio"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="material"/>
+	</field>
+	<field name="indicadorPeligro" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="indicadorPeligro"/>
+		<property name="com.jaspersoft.studio.field.label" value="indicadorPeligro"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="material"/>
+	</field>
+	<field name="fechaInicioVenta" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="fechaInicioVenta"/>
+		<property name="com.jaspersoft.studio.field.label" value="fechaInicioVenta"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="material"/>
+	</field>
+	<field name="fechaFinVenta" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="fechaFinVenta"/>
+		<property name="com.jaspersoft.studio.field.label" value="fechaFinVenta"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="material"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="93" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="550" height="80" backcolor="#30CF9C" uuid="2af33287-b253-4dd5-9a1f-9754f0272fbd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MATERIALES]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="80" height="80" uuid="40e56e33-a78b-499c-81ad-b2c4ccb1d306"/>
+				<imageExpression><![CDATA["C:/Users/usuario/AndroidStudioProjects/CompletaloMiguel/app/src/main/res/drawable/iconoConstruccion.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="470" y="0" width="80" height="80" uuid="3a3edbe1-66ba-4e65-a2f1-f84a5b650591"/>
+				<imageExpression><![CDATA["C:/Users/usuario/AndroidStudioProjects/CompletaloMiguel/app/src/main/res/drawable/iconoConstruccion.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="43" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="80" y="10" width="80" height="30" backcolor="#4FD652" uuid="72bc9549-8bbd-450a-9f9d-dac60521b6e8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[nombreMaterial]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="160" y="10" width="80" height="30" backcolor="#4FD652" uuid="2d504196-6908-4106-a4bd-76dcf4550927"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[fabricante]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="10" width="80" height="30" backcolor="#4FD652" uuid="7f966733-f43c-494b-9346-c72c27e4bb76"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[idMaterial]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="240" y="10" width="80" height="30" backcolor="#4FD652" uuid="ac9fa6ea-4d64-4a0b-8046-fd9eaeae21dd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[material]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="320" y="10" width="70" height="30" backcolor="#4FD652" uuid="0fb9437b-4fd7-485a-9135-8fdf02722f18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[precio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="390" y="10" width="50" height="30" backcolor="#4FD652" uuid="46ae5a8a-c4a6-45eb-b38c-8188eac4d1b3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[indicador Peligro]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="440" y="10" width="60" height="30" backcolor="#4FD652" uuid="57742ae7-0d14-4827-9f05-664769100c8d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[fechaInicioVenta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="500" y="10" width="50" height="30" backcolor="#4FD652" uuid="a22045f4-29be-4b7d-b3be-ec1f40d80f4b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[fechaFinVenta]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="37" splitType="Stretch">
+			<textField>
+				<reportElement mode="Opaque" x="80" y="0" width="80" height="30" backcolor="#8FEB92" uuid="db61656c-3862-4689-85f8-f656762a7fda"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nombreMaterial}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="160" y="0" width="80" height="30" backcolor="#8FEB92" uuid="7bf15acf-2d44-40d8-bed3-312dbcada063"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{fabricante}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="240" y="0" width="80" height="30" backcolor="#8FEB92" uuid="88cc3697-860e-4687-b073-ad07edb3beb4"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{material}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="320" y="0" width="70" height="30" backcolor="#8FEB92" uuid="1ff33d03-3b65-4169-8ade-28a99265d312"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{precio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="390" y="0" width="50" height="30" backcolor="#8FEB92" uuid="bd430315-8059-4476-8fa5-c07fcb2575da"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{indicadorPeligro}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="440" y="0" width="60" height="30" backcolor="#8FEB92" uuid="509fc2cb-2483-43ce-b86a-758c96a88085"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{fechaInicioVenta}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="500" y="0" width="50" height="30" backcolor="#8FEB92" uuid="85415ab5-9b6a-4b8c-b978-e679e8d29efb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{fechaFinVenta}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="0" y="0" width="80" height="30" backcolor="#8FEB92" uuid="71493941-8161-478e-b0aa-89a75a4bb8b2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idMaterial}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

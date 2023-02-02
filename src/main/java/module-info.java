@@ -7,7 +7,7 @@ module com.example.materialesdb {
     requires java.desktop;
 
 
-    opens com.example.javafxjasperreport to javafx.fxml;
+
 
     opens com.example.materialesdb to javafx.fxml;
     exports com.example.materialesdb;
