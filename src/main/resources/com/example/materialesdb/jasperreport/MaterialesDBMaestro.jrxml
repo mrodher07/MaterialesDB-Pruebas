@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MaterialesDBMaestro" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="41e6c930-9859-497b-96bd-b16d844c5c25">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="PedidosMariaDB"/>
+	<parameter name="fabricante" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT `nombreMaterial`,
+	`idMaterial`,
+	fabricante,
+	material,
+	precio,
+	`indicadorPeligro`,
+	`fechaInicioVenta`,
+	`fechaFinVenta`,
+	`idMaterial`,
+	`nombreMaterial`,
+	fabricante,
+	material,
+	precio,
+	`indicadorPeligro`,
+	`fechaInicioVenta`,
+	`fechaFinVenta`
+FROM noinch.materiales WHERE  noinch.materiales.fabricante =  $P{fabricante} ]]>
+	</queryString>
+	<field name="nombreMaterial" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nombreMaterial"/>
+		<property name="com.jaspersoft.studio.field.label" value="nombreMaterial"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="materiales"/>
+	</field>
+	<field name="idMaterial" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.name" value="idMaterial"/>
+		<property name="com.jaspersoft.studio.field.label" value="idMaterial"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="materiales"/>
+	</field>
+	<field name="fabricante" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="fabricante"/>
+		<property name="com.jaspersoft.studio.field.label" value="fabricante"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="materiales"/>
+	</field>
+	<field name="material" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="material"/>
+		<property name="com.jaspersoft.studio.field.label" value="material"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="materiales"/>
+	</field>
+	<field name="precio" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="precio"/>
+		<property name="com.jaspersoft.studio.field.label" value="precio"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="materiales"/>
+	</field>
+	<field name="indicadorPeligro" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="indicadorPeligro"/>
+		<property name="com.jaspersoft.studio.field.label" value="indicadorPeligro"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="materiales"/>
+	</field>
+	<field name="fechaInicioVenta" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="fechaInicioVenta"/>
+		<property name="com.jaspersoft.studio.field.label" value="fechaInicioVenta"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="materiales"/>
+	</field>
+	<field name="fechaFinVenta" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="fechaFinVenta"/>
+		<property name="com.jaspersoft.studio.field.label" value="fechaFinVenta"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="materiales"/>
+	</field>
+	<field name="COLUMN_9" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.name" value="idMaterial"/>
+		<property name="com.jaspersoft.studio.field.label" value="idMaterial"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="materiales"/>
+	</field>
+	<field name="COLUMN_10" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nombreMaterial"/>
+		<property name="com.jaspersoft.studio.field.label" value="nombreMaterial"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="materiales"/>
+	</field>
+	<field name="COLUMN_11" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="fabricante"/>
+		<property name="com.jaspersoft.studio.field.label" value="fabricante"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="materiales"/>
+	</field>
+	<field name="COLUMN_12" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="material"/>
+		<property name="com.jaspersoft.studio.field.label" value="material"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="materiales"/>
+	</field>
+	<field name="COLUMN_13" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="precio"/>
+		<property name="com.jaspersoft.studio.field.label" value="precio"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="materiales"/>
+	</field>
+	<field name="COLUMN_14" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="indicadorPeligro"/>
+		<property name="com.jaspersoft.studio.field.label" value="indicadorPeligro"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="materiales"/>
+	</field>
+	<field name="COLUMN_15" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="fechaInicioVenta"/>
+		<property name="com.jaspersoft.studio.field.label" value="fechaInicioVenta"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="materiales"/>
+	</field>
+	<field name="COLUMN_16" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="fechaFinVenta"/>
+		<property name="com.jaspersoft.studio.field.label" value="fechaFinVenta"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="materiales"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="87" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="550" height="80" backcolor="#30CF9C" uuid="96022477-fdf0-40e4-a78e-6bc36dec11ff"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MATERIALES]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="80" height="80" uuid="d1bd97b6-0939-4105-92dc-6c053163d534"/>
+				<imageExpression><![CDATA["C:/Users/usuario/AndroidStudioProjects/CompletaloMiguel/app/src/main/res/drawable/iconoConstruccion.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="470" y="0" width="80" height="80" uuid="e28ff1d7-cacf-4998-af7a-4a32d9ce5d46"/>
+				<imageExpression><![CDATA["C:/Users/usuario/AndroidStudioProjects/CompletaloMiguel/app/src/main/res/drawable/iconoConstruccion.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="316" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="50" width="60" height="30" uuid="c44000c6-1f34-4e74-943b-8e09ea4adaff"/>
+				<textFieldExpression><![CDATA[$F{idMaterial}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="20" width="60" height="30" uuid="bbd9b734-ad5f-4b6d-8d04-a9ce57bbb4ec"/>
+				<text><![CDATA[idMaterial]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="60" y="50" width="100" height="30" uuid="a752fc06-42eb-4306-b332-f9496089a638"/>
+				<textFieldExpression><![CDATA[$F{nombreMaterial}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="60" y="20" width="100" height="30" uuid="8115ee5b-2151-4711-b289-2f602c422ef2"/>
+				<text><![CDATA[nombreMaterial]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="160" y="50" width="80" height="30" uuid="1e867451-1ee8-4fb4-964b-51cd109ada3f"/>
+				<textFieldExpression><![CDATA[$F{material}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="160" y="20" width="80" height="30" uuid="4fc75238-0b77-4e36-9d4b-436e05407f4e"/>
+				<text><![CDATA[material]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="240" y="50" width="70" height="30" uuid="6b5bb8f9-f5d8-418f-a195-0ba6069eb8a1"/>
+				<textFieldExpression><![CDATA[$F{precio}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="240" y="20" width="70" height="30" uuid="0270ef80-6418-44a5-91cf-2a9fb68d99f6"/>
+				<text><![CDATA[precio]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="310" y="50" width="50" height="30" uuid="6f1a1dcd-7191-4eea-8dec-9f0ba9fbdd03"/>
+				<textFieldExpression><![CDATA[$F{indicadorPeligro}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="310" y="20" width="50" height="30" uuid="68392f15-9927-423e-bab2-f1917470fe6b"/>
+				<text><![CDATA[indicador Peligro]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="360" y="50" width="100" height="30" uuid="cc30ec36-6f9c-476a-9831-26949617ec0e"/>
+				<textFieldExpression><![CDATA[$F{fechaInicioVenta}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="360" y="20" width="100" height="30" uuid="670c2615-de1c-49fb-a817-386e5d490766"/>
+				<text><![CDATA[fechaInicioVenta]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="460" y="50" width="90" height="30" uuid="4864d550-976d-439b-a652-9c86c9eb11b2"/>
+				<textFieldExpression><![CDATA[$F{fechaFinVenta}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="460" y="20" width="90" height="30" uuid="7cac9231-1046-4532-afeb-258a398ca0bf"/>
+				<text><![CDATA[fechaFinVenta]]></text>
+			</staticText>
+			<subreport>
+				<reportElement x="0" y="100" width="560" height="210" uuid="0193d526-9b8d-4fec-b7d6-681139f8d168"/>
+				<subreportParameter name="fabricante">
+					<subreportParameterExpression><![CDATA[$P{fabricante}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["MaterialesDBDetalles.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

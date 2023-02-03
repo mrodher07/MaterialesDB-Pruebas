@@ -61,8 +61,8 @@ public class JavaFXJasperReport extends JFrame {
         conexionBBDD = DriverManager.getConnection(servidor, usuario, passwd);
 
         //  Block of code to try
-        String reportSrcFile = "src/main/java/com/example/javafxjasperreport/MaestroClientes.jrxml";
-        String subReportSrcFile = "src/main/java/com/example/javafxjasperreport/SubreportPedidos.jrxml";
+        String reportSrcFile = "src/main/resources/com/example/materialesdb/jasperreport/MaterialesDBMaestro.jrxml";
+        String subReportSrcFile = "src/main/resources/com/example/materialesdb/jasperreport/MaterialesDBDetalles.jrxml";
 
         // First, compile jrxml file.
         JasperReport jasperReport = JasperCompileManager.compileReport(reportSrcFile);

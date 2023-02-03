@@ -114,6 +114,19 @@ public class ControllerInicio {
                 throw new RuntimeException(e);
             }
         });
+        subReporte.setOnMouseClicked(event->{
+
+            try {
+                JavaFXJasperReport jfx = new JavaFXJasperReport();
+                jfx.showReportConSubreport();
+            } catch (JRException e) {
+                throw new RuntimeException(e);
+            } catch (ClassNotFoundException e) {
+                throw new RuntimeException(e);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        });
 
         cabeceraNuevoRegistro.setOnMouseClicked(new EventHandler(){
             @Override
