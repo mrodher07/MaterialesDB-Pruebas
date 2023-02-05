@@ -2,7 +2,7 @@
 <!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MaterialesDBMaestro" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="41e6c930-9859-497b-96bd-b16d844c5c25">
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
-	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="PedidosMariaDB"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MariaDB"/>
 	<parameter name="fabricante" class="java.lang.String"/>
 	<queryString language="SQL">
 		<![CDATA[SELECT `nombreMaterial`,
@@ -21,7 +21,7 @@
 	`indicadorPeligro`,
 	`fechaInicioVenta`,
 	`fechaFinVenta`
-FROM noinch.materiales WHERE  noinch.materiales.fabricante =  $P{fabricante} ]]>
+FROM noinch.materiales WHERE  noinch.materiales.fabricante =  $P{fabricante}]]>
 	</queryString>
 	<field name="nombreMaterial" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.name" value="nombreMaterial"/>
@@ -115,14 +115,6 @@ FROM noinch.materiales WHERE  noinch.materiales.fabricante =  $P{fabricante} ]]>
 				</textElement>
 				<text><![CDATA[MATERIALES]]></text>
 			</staticText>
-			<image>
-				<reportElement x="0" y="0" width="80" height="80" uuid="d1bd97b6-0939-4105-92dc-6c053163d534"/>
-				<imageExpression><![CDATA["C:/Users/usuario/AndroidStudioProjects/CompletaloMiguel/app/src/main/res/drawable/iconoConstruccion.png"]]></imageExpression>
-			</image>
-			<image>
-				<reportElement x="470" y="0" width="80" height="80" uuid="e28ff1d7-cacf-4998-af7a-4a32d9ce5d46"/>
-				<imageExpression><![CDATA["C:/Users/usuario/AndroidStudioProjects/CompletaloMiguel/app/src/main/res/drawable/iconoConstruccion.png"]]></imageExpression>
-			</image>
 		</band>
 	</title>
 	<pageHeader>
@@ -132,7 +124,7 @@ FROM noinch.materiales WHERE  noinch.materiales.fabricante =  $P{fabricante} ]]>
 		<band splitType="Stretch"/>
 	</columnHeader>
 	<detail>
-		<band height="316" splitType="Stretch">
+		<band height="204" splitType="Stretch">
 			<textField>
 				<reportElement x="0" y="50" width="60" height="30" uuid="c44000c6-1f34-4e74-943b-8e09ea4adaff"/>
 				<textFieldExpression><![CDATA[$F{idMaterial}]]></textFieldExpression>
@@ -190,7 +182,7 @@ FROM noinch.materiales WHERE  noinch.materiales.fabricante =  $P{fabricante} ]]>
 				<text><![CDATA[fechaFinVenta]]></text>
 			</staticText>
 			<subreport>
-				<reportElement x="0" y="100" width="560" height="210" uuid="0193d526-9b8d-4fec-b7d6-681139f8d168"/>
+				<reportElement x="0" y="90" width="560" height="100" uuid="0193d526-9b8d-4fec-b7d6-681139f8d168"/>
 				<subreportParameter name="fabricante">
 					<subreportParameterExpression><![CDATA[$P{fabricante}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -206,6 +198,6 @@ FROM noinch.materiales WHERE  noinch.materiales.fabricante =  $P{fabricante} ]]>
 		<band splitType="Stretch"/>
 	</pageFooter>
 	<summary>
-		<band height="42" splitType="Stretch"/>
+		<band height="51" splitType="Stretch"/>
 	</summary>
 </jasperReport>
