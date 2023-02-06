@@ -73,7 +73,7 @@ FROM noinch.datostecnicos, noinch.materiales
 	<columnHeader>
 		<band height="35" splitType="Stretch">
 			<rectangle>
-				<reportElement mode="Opaque" x="-20" y="3" width="560" height="29" forecolor="#FFFFFF" backcolor="#5C9686" uuid="5b9c1790-fb8b-410b-b98e-3d5a28a5fbe7"/>
+				<reportElement mode="Opaque" x="-20" y="3" width="550" height="29" forecolor="#FFFFFF" backcolor="#5C9686" uuid="5b9c1790-fb8b-410b-b98e-3d5a28a5fbe7"/>
 			</rectangle>
 			<staticText>
 				<reportElement x="41" y="2" width="100" height="30" uuid="a947bb00-ad97-4a72-9189-ea67601a4418">
@@ -82,7 +82,7 @@ FROM noinch.datostecnicos, noinch.materiales
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[peso]]></text>
+				<text><![CDATA[peso (kg)]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="141" y="2" width="100" height="30" uuid="021d3c5c-e180-46db-9f28-2f2af4048cb0">
@@ -121,7 +121,7 @@ FROM noinch.datostecnicos, noinch.materiales
 				<text><![CDATA[idMaterial]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="441" y="2" width="100" height="30" uuid="ac07b0c4-6852-4682-844e-64ee284abccd">
+				<reportElement x="441" y="2" width="89" height="30" uuid="ac07b0c4-6852-4682-844e-64ee284abccd">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2dca4fc9-f925-47c1-8c5b-2d3f08736d5c"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -134,7 +134,7 @@ FROM noinch.datostecnicos, noinch.materiales
 	<detail>
 		<band height="33" splitType="Stretch">
 			<rectangle>
-				<reportElement x="-20" y="0" width="561" height="32" backcolor="#77D1B6" uuid="63599289-5e1a-4cba-a1e3-ce653f12b946">
+				<reportElement x="-20" y="0" width="550" height="32" backcolor="#77D1B6" uuid="63599289-5e1a-4cba-a1e3-ce653f12b946">
 					<printWhenExpression><![CDATA[new Integer($V{contarFilas}/2)*2==$V{contarFilas}]]></printWhenExpression>
 				</reportElement>
 			</rectangle>
@@ -143,7 +143,7 @@ FROM noinch.datostecnicos, noinch.materiales
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="de52f81b-8ac9-48c6-9382-c71b64535940"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$F{peso}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[new DecimalFormat("#,##0.00").format($F{peso})]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="141" y="2" width="100" height="30" uuid="b029ee3c-fdf7-42d6-bfc4-059cd99c9d58">
@@ -167,7 +167,7 @@ FROM noinch.datostecnicos, noinch.materiales
 				<textFieldExpression><![CDATA[$F{LugarUso}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="441" y="2" width="100" height="30" uuid="d1eba88f-8feb-49d4-a512-dffec8d0681a">
+				<reportElement x="441" y="2" width="89" height="30" uuid="d1eba88f-8feb-49d4-a512-dffec8d0681a">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2dca4fc9-f925-47c1-8c5b-2d3f08736d5c"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
