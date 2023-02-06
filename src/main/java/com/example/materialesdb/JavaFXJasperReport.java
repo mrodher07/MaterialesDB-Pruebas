@@ -50,7 +50,7 @@ public class JavaFXJasperReport extends JFrame {
         System.out.print("Done!");
     }
 
-    public void showReportConSubreport() throws JRException, ClassNotFoundException, SQLException {
+    public void showReportConSubreport(String fabricante) throws JRException, ClassNotFoundException, SQLException {
 
         String servidor = "jdbc:mariadb://localhost:5555/noinch?useSSL=false";
         String usuario = "adminer";
@@ -74,6 +74,7 @@ public class JavaFXJasperReport extends JFrame {
 
         HashMap<String, Object> parameters = new HashMap<String, Object>();
 
+        parameters.put("fabricante", fabricante);
         parameters.put("Subreport", jasperSubReport);
 
         JasperPrint print = JasperFillManager.fillReport(jasperReport, parameters, conexionBBDD);

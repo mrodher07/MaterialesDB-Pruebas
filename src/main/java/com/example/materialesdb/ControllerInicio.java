@@ -118,7 +118,7 @@ public class ControllerInicio {
 
             try {
                 JavaFXJasperReport jfx = new JavaFXJasperReport();
-                jfx.showReportConSubreport();
+                jfx.showReportConSubreport("Fassa Bortolo");
             } catch (JRException e) {
                 throw new RuntimeException(e);
             } catch (ClassNotFoundException e) {
