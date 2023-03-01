@@ -47,6 +47,14 @@ public class ControllerNuevoRegistro {
     private Button botonNuevoRegistro;
 
 
+    /**
+     Inicializa la vista de la aplicación y establece los eventos para los diferentes elementos de la interfaz.
+     Se cargan las opciones del ComboBox para el indicador de peligro y se establecen los valores por defecto para algunos campos.
+     Se configura el evento del botón "Nuevo registro" para que valide los campos antes de agregar un nuevo registro a la base de datos y cambie a la vista "Inicio".
+     Se configura el evento de la cabecera "Nuevo registro" para que cambie a la vista "Nuevo registro".
+     Se configura el evento del botón "Volver a inicio" para que cambie a la vista "Inicio".
+     @throws RuntimeException Si ocurre un error al cargar el archivo FXML.
+     */
     @FXML
     protected void initialize(){
 

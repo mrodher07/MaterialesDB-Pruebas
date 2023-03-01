@@ -68,6 +68,11 @@ public class ControllerEditarRegistro {
     @FXML
     private Button botonBorrarRegistro;
 
+    /**
+     Método que se ejecuta al inicializar la vista, establece las opciones del selector de indicador de peligro,
+     carga los datos en los campos, establece las acciones para los botones de "nuevo registro", "volver al inicio",
+     "actualizar registro" y "borrar registro".
+     */
     @FXML
     protected void initialize(){
 
@@ -175,7 +180,14 @@ public class ControllerEditarRegistro {
 
     }
 
+    /**
+
+     Método que carga los datos del material en los campos correspondientes de la vista de edición de registros.
+     Obtiene los datos del material y datos técnicos desde la base de datos utilizando el ID del material actual.
+     Si existen datos técnicos, los carga en los campos correspondientes, de lo contrario, los campos técnicos quedan vacíos.
+     */
     public void cargarDatosCampos(){
+
         int id = m.getIdMaterial();
         datos = materialDAO.buscarDatosMaterial(id);
         nombreER.setText(datos.get(0).getNombreMaterial());
@@ -203,6 +215,10 @@ public class ControllerEditarRegistro {
 
     }
 
+    /**
+     Actualiza los campos de un material en la base de datos utilizando los valores ingresados en los campos de la interfaz gráfica.
+     @throws NumberFormatException Si alguno de los valores numéricos ingresados no es un número válido.
+     */
     public void actualizarCampos(){
         int id = m.getIdMaterial();
 
@@ -249,7 +265,10 @@ public class ControllerEditarRegistro {
         }
 
     }
-
+    /**
+     Método que permite borrar un registro de la base de datos.
+     @return true si se borra el registro correctamente, false en caso contrario.
+     */
     public boolean borrarRegistro(){
 
         int id = m.getIdMaterial();

@@ -77,6 +77,14 @@ public class ControllerInicio {
     @FXML
     private Button subReporte;
 
+    /**
+
+     Este método es llamado al inicializar la ventana de la aplicación. Se encarga de cargar los datos en la tabla,
+     configurar las opciones del ComboBox, cargar la funcionalidad de doble click en la edición de registros,
+     configurar los botones para generar los reportes y navegar a otras ventanas, y manejar los eventos de selección
+     de fecha en los DatePickers.
+     @return void
+     */
     @FXML
     protected void initialize(){
 
@@ -184,6 +192,13 @@ public class ControllerInicio {
 
     }
 
+    /**
+
+     Carga los datos de todos los materiales en la tabla de la interfaz gráfica.
+     Se encarga de obtener los datos de la base de datos mediante el objeto MaterialDAO y
+     establece la correspondencia entre los atributos de la clase Material y las columnas
+     de la tabla. Finalmente, establece los datos en la tabla de la interfaz gráfica.
+     */
     private void cargarDatosTabla(){
         datos = materialDAO.obtenerMaterialesTotal();
 
@@ -198,6 +213,15 @@ public class ControllerInicio {
         tvMateriales.setItems(datos);
 
     }
+
+    /**
+
+     Carga los datos de la tabla con los materiales que coinciden con los criterios de búsqueda especificados.
+     Los criterios de búsqueda son obtenidos de los campos de texto e ítems seleccionados en la interfaz gráfica.
+     Si un campo está vacío, se considera como criterio vacío. Si el campo precio está vacío, se asigna un valor predeterminado.
+     Los datos son obtenidos mediante una consulta a la base de datos utilizando el objeto materialDAO.
+     Los datos son asignados a la tabla y visualizados en la interfaz gráfica.
+     */
     public void cargarDatosConsultaTabla(){
 
         String nombre;
@@ -230,25 +254,6 @@ public class ControllerInicio {
         }else{
             indicadorPeligro = cbPeligro.getValue().toString();
         }
-        /*LocalDate fechaInicioValor = fechaInicioVenta.getValue();
-        LocalDate fechaFinValor = fechaFinVenta.getValue();
-        if(fechaInicioValor == null){
-            CharSequence cs = "2000/1/1";
-            fechaInicioValor = LocalDate.parse(cs,DateTimeFormatter.ISO_LOCAL_DATE);
-        }else{
-
-
-        }
-        if(fechaFinValor == null){
-            CharSequence cs = "2000/1/1";
-            fechaFinValor = LocalDate.parse(cs, DateTimeFormatter.ISO_LOCAL_DATE);
-        }
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MMM-dd");
-        CharSequence fechaIni = fechaInicioValor.toString();
-        CharSequence fechain = fechaFinValor.toString();
-
-        Date fechaInicio = (Date) dtf.parse(fechaIni);
-        Date fechaFin = (Date) dtf.parse(fechain);*/
 
         datos = materialDAO.buscarMateriales(nombre, fabricante, material, precio, indicadorPeligro, fechaInicio, fechaFin);
 
@@ -263,7 +268,9 @@ public class ControllerInicio {
         tvMateriales.setItems(datos);
 
     }
-
+    /**
+     Carga el evento de doble clic en una fila de la tabla para editar el registro seleccionado.
+     */
     private void cargarDobleClickEdicion(){
         tvMateriales.setRowFactory(tv->{
             TableRow<Material> row = new TableRow<>();
