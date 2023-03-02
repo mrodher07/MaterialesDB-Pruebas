@@ -20,6 +20,14 @@ public class JavaFXJasperReport extends JFrame {
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     *
+     * Funcion que devuelve y muestra el reporte simple que hemos creado
+     *
+     * @throws JRException
+     * @throws ClassNotFoundException
+     * @throws SQLException
+     */
     public void showReportSimple() throws JRException, ClassNotFoundException, SQLException {
         String servidor = "jdbc:mariadb://localhost:5555/noinch?useSSL=false";
         String usuario = "adminer";
@@ -50,6 +58,13 @@ public class JavaFXJasperReport extends JFrame {
         System.out.print("Done!");
     }
 
+    /**
+     * Funcion que muestra el reporte con un subreporte que hemos creado
+     * @param fabricante
+     * @throws JRException
+     * @throws ClassNotFoundException
+     * @throws SQLException
+     */
     public void showReportConSubreport(String fabricante) throws JRException, ClassNotFoundException, SQLException {
 
         String servidor = "jdbc:mariadb://localhost:5555/noinch?useSSL=false";

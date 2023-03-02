@@ -15,6 +15,19 @@ public class Material {
     private final StringProperty fechaFinVenta;
 
 
+    /**
+     *
+     * Constructor pasandole parametros para el objeto de Material
+     *
+     * @param idMaterial
+     * @param nombreMaterial
+     * @param fabricante
+     * @param material
+     * @param precio
+     * @param indicadorPeligro
+     * @param fechaInicioVenta
+     * @param fechaFinVenta
+     */
     public Material(int idMaterial, String nombreMaterial, String fabricante, String material, double precio, String indicadorPeligro, String fechaInicioVenta, String fechaFinVenta) {
         this.idMaterial = new SimpleIntegerProperty(idMaterial);
         this.nombreMaterial = new SimpleStringProperty(nombreMaterial);
@@ -26,6 +39,9 @@ public class Material {
         this.fechaFinVenta = new SimpleStringProperty(fechaFinVenta);
     }
 
+    /**
+     * Constructor sin pasarle parametros para el objeto de Material
+     */
     public Material() {
         this.idMaterial = new SimpleIntegerProperty(0);
         this.nombreMaterial = new SimpleStringProperty("");
@@ -37,6 +53,10 @@ public class Material {
         this.fechaFinVenta = new SimpleStringProperty("");
     }
 
+    /**
+     * Devuelve un string con los valores del objeto Material.
+     * @return
+     */
     @Override
     public String toString() {
         return "IDMaterial: "+idMaterial+

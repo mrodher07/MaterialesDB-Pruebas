@@ -5,7 +5,6 @@ module com.example.materialesdb {
     requires org.mariadb.jdbc;
     requires jasperreports;
     requires java.desktop;
-
     opens com.example.materialesdb to javafx.fxml;
     exports com.example.materialesdb;
     exports com.example.materialesdb.dao;

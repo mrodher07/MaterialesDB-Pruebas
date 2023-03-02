@@ -13,7 +13,18 @@ public class datosTecnicos {
     private final StringProperty recipiente;
     private final StringProperty composicion;
 
-
+    /**
+     *
+     * Constructor pasandole parametros para el objeto de datosTecnicos
+     *
+     * @param idMaterial
+     * @param peso
+     * @param color
+     * @param herramientaUso
+     * @param lugarUso
+     * @param recipiente
+     * @param composicion
+     */
     public datosTecnicos(int idMaterial, Double peso, String color, String herramientaUso, String lugarUso, String recipiente, String composicion) {
         this.idMaterial = new SimpleIntegerProperty(idMaterial);
         this.peso = new SimpleDoubleProperty(peso);
@@ -24,6 +35,9 @@ public class datosTecnicos {
         this.composicion = new SimpleStringProperty(composicion);
     }
 
+    /**
+     * Constructor sin pasarle parametros para el objeto de datosTecnicos
+     */
     public datosTecnicos() {
         this.idMaterial = new SimpleIntegerProperty(0);
         this.peso = new SimpleDoubleProperty(0.00);
@@ -34,6 +48,10 @@ public class datosTecnicos {
         this.composicion = new SimpleStringProperty("");
     }
 
+    /**
+     * Funcion toString que muestra todos los datos pertenecientes al objeto datosTecnicos
+     * @return
+     */
     @Override
     public String toString() {
         return "IDMaterial: "+idMaterial+
@@ -45,43 +63,106 @@ public class datosTecnicos {
                 ", Composicion: "+ composicion +".";
     }
 
+    /**
+     *
+     * @return
+     */
     public static datosTecnicos getInstance() {
         return instance;
     }
 
+    /**
+     *
+     * @param idMaterial
+     */
     public void setIdMaterial(int idMaterial){
         this.idMaterial.set(idMaterial);
     }
+
+    /**
+     *
+     * @return
+     */
     public int getIdMaterial(){
         return idMaterial.get();
     }
+
+    /**
+     *
+     * @return
+     */
     public IntegerProperty idMaterialProperty(){
         return idMaterial;
     }
+
+    /**
+     *
+     * @param peso
+     */
     public void setPeso(String peso){
         this.peso.set(Double.parseDouble(peso));
     }
+
+    /**
+     *
+     * @return
+     */
     public double getPeso(){
         return peso.get();
     }
+
+    /**
+     *
+     * @return
+     */
     public DoubleProperty pesoProperty(){
         return peso;
     }
+
+    /**
+     *
+     * @param color
+     */
     public void setColor(String color){
         this.color.set(color);
     }
+
+    /**
+     *
+     * @return
+     */
     public String getColor(){
         return color.get();
     }
+
+    /**
+     *
+     * @return
+     */
     public StringProperty colorProperty(){
         return color;
     }
+
+    /**
+     *
+     * @param herramientaUso
+     */
     public void setHerramientaUso(String herramientaUso){
         this.herramientaUso.set(herramientaUso);
     }
+
+    /**
+     *
+     * @return
+     */
     public String getHerramientaUso(){
         return herramientaUso.get();
     }
+
+    /**
+     *
+     * @return
+     */
     public StringProperty herramientaUsoProperty(){
         return herramientaUso;
     }
